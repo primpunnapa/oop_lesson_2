@@ -113,9 +113,8 @@ class Table:
         pivot = []
         for k in com:
             # print(keys_to_pivot_list[0], keys_to_pivot_list[1], keys_to_pivot_list[2], k)
-            # test = self.filter(lambda x: x[keys_to_pivot_list[0]] == k[0] and x[keys_to_pivot_list[1]] == k[1] and x[keys_to_pivot_list[2]] == k[2])
             combine = self.filter(lambda x: x[keys_to_pivot_list[0]] == k[0])
-            for m in range(1,len(keys_to_pivot_list)):
+            for m in range(1, len(keys_to_pivot_list)):
                 combine = combine.filter(lambda x: x[keys_to_pivot_list[m]] == k[m])
             comb_list = []
             for n in range(len(keys_to_aggreagte_list)):
